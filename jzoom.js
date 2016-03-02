@@ -181,6 +181,8 @@
 
                 return finalD;
             }
+
+            return this;
         });
     };
 })(jQuery);
