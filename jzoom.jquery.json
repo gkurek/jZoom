@@ -4,10 +4,11 @@
     "description": "jQuery plugin for zooming images",
     "keywords": [
         "animation",
+        "effect",
         "zoom",
         "image"
     ],
-    "version": "1.1.0",
+    "version": "1.1.1",
     "author": {
         "name": "Ting Shen",
         "email": "pciapcib@163.com",
