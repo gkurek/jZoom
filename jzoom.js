@@ -1,4 +1,4 @@
-(function($) {
+;(function($) {
     $.fn.jzoom = function(options) {
         return this.each(function() {
             //设置默认属性
