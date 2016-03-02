@@ -13,13 +13,6 @@
         "email": "pciapcib@163.com",
         "url": "https://github.com/pciapcib"
     },
-    "maintainers": [
-        {
-            "name": "Ting Shen",
-            "email": "pciapcib@163.com",
-            "url": "https://github.com/pciapcib"
-        }
-    ],
     "licenses": [
         {
             "type": "MIT",
@@ -28,9 +21,9 @@
     ],
     "bugs": "https://github.com/pciapcib/jZoom/issues",
     "homepage": "https://github.com/pciapcib/jZoom",
-    "docs": "https://github.com/pciapcib/jZoom/blob/master/README.md",
-    "demo":"https://github.com/pciapcib/jZoom/blob/master/demo/demo.html",
-    "download": "https://github.com/pciapcib/jZoom/archive/master.zip",
+    "docs": "https://github.com/pciapcib/jZoom/",
+    "demo":"https://github.com/pciapcib/jZoom/tree/master/demo",
+    "download": "https://github.com/pciapcib/jZoom/",
     "dependencies": {
         "jquery": ">=2.0.0"
     }
