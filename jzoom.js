@@ -2,6 +2,7 @@
     $.fn.jzoom = function(options) {
         return this.each(function() {
             //设置默认属性
+            //Set up default options
             var defaultOptions = {
                 width: 400,
                 height: 400,
@@ -14,9 +15,11 @@
             };
 
             //用户自定义属性
+            //Custom options
             options = $.extend(true, defaultOptions, options);
 
             //获取容器，设置默认定位，并使图片的宽高与容器相同
+            //Get container to add position and make the image having same width and height with container
             var $jzoom = $(this);
             var jzoomPosition = $jzoom.css('position');
             if (jzoomPosition === "static") {
@@ -27,7 +30,8 @@
                 height: $jzoom.height() + "px"
             });
 
-            //获取镜片div，设置样式，部分样式从属性设置中取得
+            //获取镜头div，设置样式，部分样式从属性设置中取得
+            //Get lens div and add css
             var $jzoomLens = $('<div></div>');
             $jzoomLens.css({
                 position: "absolute",
@@ -39,6 +43,7 @@
             });
 
             //获取放大镜div，设置样式，部分样式从属性设置中取得
+            //Get zooming window and add css
             var $jzoomDiv = $('<div></div>');
             var jzoomDivLeft, jzoomDivTop;
             switch (defaultOptions.position) {
@@ -74,10 +79,12 @@
             });
 
             //获取大图，并设置后缀名和文件格式，与载入文字一起添加到容器中
+            //Create <img> of big image and add loading text
             var $zoomImg = createZoomImg(defaultOptions.suffixName, defaultOptions.imgType);
             $jzoomDiv.append($zoomImg).append(defaultOptions.loading);
 
             //声明全局变量和常量
+            //Variables
             var flag = 0,
                 JzoomOffset = $jzoom.offset(),
                 CriticalX, CriticalY,
@@ -85,7 +92,7 @@
                 DistProportionX, DistProportionY;
 
             //添加鼠标事件
-            //由于大图的宽高在首次进入容器时才能得到，因此一些依赖它的变量和常量的计算与其一起放到函数中
+            //Mouse events
             $jzoom.mouseenter(function() {
                     $jzoomLens.show();
                     $jzoomDiv.show();
@@ -95,7 +102,8 @@
                     }
                 })
                 .mousemove(function(e) {
-                    //计算镜片div坐标
+                    //计算镜头div坐标
+                    //Calculate coordinates of lens div
                     finalX = calcDistance(e.pageX, JzoomOffset.left, $jzoomLens.width(), CriticalX);
                     finalY = calcDistance(e.pageY, JzoomOffset.top, $jzoomLens.height(), CriticalY);
 
@@ -105,6 +113,7 @@
                     });
 
                     //计算大图的偏移坐标
+                    //Calculate offsets of big images
                     $zoomImg.css({
                         left: -finalX * DistProportionX + "px",
                         top: -finalY * DistProportionY + "px"
@@ -117,9 +126,10 @@
 
             /**
              * 创建大图
-             * @param  {String} suffixName 大图后缀
-             * @param  {String} imgType    图片格式
-             * @return {jQuery}            返回jQuery对象
+             * Create <img> of big image
+             * @param  {String} suffixName 大图后缀 suffix name of big image
+             * @param  {String} imgType    图片格式 image type of big image
+             * @return {jQuery}            返回大图 big image
              */
             function createZoomImg(suffixName, imgType) {
                 var imgSrc = $jzoom.find("img").attr("src");
@@ -132,16 +142,23 @@
 
                 var newImgSrc = imgSrc.substring(0, point) + suffixName + "." + imgType;
                 var newImg = $('<img>').attr("src", newImgSrc).css('position', 'absolute');
+
                 return newImg;
             }
 
             /**
              * 首次触发鼠标事件
+             * Trigger first mouse event
+             * 由于大图的宽高在首次进入容器时才能得到
+             * Only get the width and height of big image on first mouse event
+             * 因此一些依赖它的变量和常量的计算与其一起放到函数中
+             * so some calculation of variables are put in the function which depend on them
              */
             function firstEnter() {
                 $jzoom.append($jzoomLens).append($jzoomDiv);
 
-                //计算镜片div的宽高比例
+                //计算镜头div的宽高比例
+                //Calculate proportions of lens div
                 var VolProportionX = $zoomImg.width() / $jzoom.width();
                 var VolProportionY = $zoomImg.height() / $jzoom.height();
 
@@ -150,22 +167,25 @@
                     height: $jzoomDiv.height() / VolProportionY + "px"
                 });
 
-                //计算镜片div的临界坐标
+                //计算镜头div的临界坐标
+                //Calculate critical coordinates of lens div
                 CriticalX = $jzoom.width() - $jzoomLens.outerWidth();
                 CriticalY = $jzoom.height() - $jzoomLens.outerHeight();
 
                 //计算大图的偏移比例
+                //Calculate proportions of offsets of big image
                 DistProportionX = ($zoomImg.width() - $jzoomDiv.width()) / CriticalX;
                 DistProportionY = ($zoomImg.height() - $jzoomDiv.height()) / CriticalY;
             }
 
             /**
              * 计算距离
-             * @param  {Mumber} pageD     鼠标坐标
-             * @param  {Number} offsetD   容器偏移距离
-             * @param  {Number} lensW     镜片div宽高
-             * @param  {Number} criticalD 镜片div临界坐标
-             * @return {[type]}           镜片div坐标
+             * Calculate distance
+             * @param  {Mumber} pageD     鼠标坐标 coordinates of mouse
+             * @param  {Number} offsetD   容器偏移距离 offsets of container
+             * @param  {Number} lensW     镜头div宽高 width or height of lens div
+             * @param  {Number} criticalD 镜头div临界坐标 critical coordinates of lens div
+             * @return {Number}           镜头div坐标 coordinates of lens div
              */
             function calcDistance(pageD, offsetD, lensW, criticalD) {
                 var finalD,
