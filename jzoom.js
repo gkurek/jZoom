@@ -1,4 +1,13 @@
-;(function($) {
+/*!
+ * jZoom.js 1.1.3
+ *
+ * https://github.com/pciapcib/jZoom
+ *
+ * MIT licensed
+ *
+ * Copyright (c) 2016 Ting Shen
+ */
+(function($) {
     $.fn.jzoom = function(options) {
         return this.each(function() {
             //设置默认属性
@@ -49,7 +58,7 @@
             switch (defaultOptions.position) {
                 case "top":
                     jzoomDivLeft = 0;
-                    jzoomDivTop = -$jzoom.height() - defaultOptions.offsetY;
+                    jzoomDivTop = -defaultOptions.height - defaultOptions.offsetY;
                     break;
                 case "right":
                     jzoomDivLeft = $jzoom.width() + defaultOptions.offsetX;
@@ -60,7 +69,7 @@
                     jzoomDivTop = $jzoom.height() + defaultOptions.offsetY;
                     break;
                 case "left":
-                    jzoomDivLeft = -$jzoom.width() - defaultOptions.offsetX;
+                    jzoomDivLeft = -defaultOptions.width - defaultOptions.offsetX;
                     jzoomDivTop = 0;
                     break;
             }
