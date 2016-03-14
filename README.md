@@ -84,14 +84,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ###使用说明
 
-引入下列文件
+引入下列文件，
 
 ```html
 <script src="scripts/jquery.min.js"></script>
 <script src="scripts/jzoom.min.js"></script>
 ```
 
-然后在想要放大的图片的容器上调用插件
+然后在想要放大的图片的容器上调用插件，
 
 ```javascript
 $('#container').jzoom();
