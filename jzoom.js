@@ -5,7 +5,7 @@
  *
  * MIT licensed
  *
- * Copyright (c) 2016 Ting Shen
+ * Copyright (c) 2016 Shen Ting
  */
 (function($) {
     $.fn.jzoom = function(options) {

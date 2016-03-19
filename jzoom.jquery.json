@@ -1,29 +1,26 @@
 {
     "name": "jzoom",
     "title": "jZoom",
-    "description": "jQuery plugin for zooming images",
+    "description": "A tiny and easy-using jQuery plugin for zoomimg images",
     "keywords": [
         "animation",
         "effect",
         "zoom",
         "image"
     ],
-    "version": "1.1.3",
+    "version": "1.1.4",
     "author": {
-        "name": "Ting Shen",
+        "name": "Shen Ting",
         "email": "pciapcib@163.com",
         "url": "https://github.com/pciapcib"
     },
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "https://github.com/pciapcib/jZoom/blob/master/license.md"
-        }
-    ],
+    "licenses": {
+        "type": "MIT"
+    },
     "bugs": "https://github.com/pciapcib/jZoom/issues",
     "homepage": "https://github.com/pciapcib/jZoom",
     "docs": "https://github.com/pciapcib/jZoom/",
-    "demo":"https://github.com/pciapcib/jZoom/tree/master/demo",
+    "demo": "http://shenting.me/jZoom/demo/",
     "download": "https://github.com/pciapcib/jZoom/",
     "dependencies": {
         "jquery": ">=1.5.0"
