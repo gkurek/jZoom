@@ -1,5 +1,5 @@
 /*!
- * jZoom.js 1.1.3
+ * jZoom.js 1.1.4
  *
  * https://github.com/pciapcib/jZoom
  *
