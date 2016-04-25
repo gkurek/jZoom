@@ -13,7 +13,7 @@ A tiny and easy-using jQuery plugin for zoomimg images
 * [使用说明](#使用说明)
 * [配置选项](#配置选项)
 * [注意事项](#注意事项)
-* [其它](#其它)
+* [开源协议](#开源协议)
 
 ##Quick start
 
@@ -138,3 +138,7 @@ $('#container').jzoom({
     * 名称：如原图的文件名为image，则大图的文件名需为“image + 后缀名” 。
     * 格式：大图与原图的格式建议相同，因为在IE下有时会出现bug。
     * 位于同一目录下。
+
+##开源协议
+
+基于 [MIT](https://zh.wikipedia.org/wiki/MIT%E8%A8%B1%E5%8F%AF%E8%AD%89) 协议。
