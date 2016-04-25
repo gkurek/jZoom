@@ -17,11 +17,17 @@ A tiny and easy-using jQuery plugin for zoomimg images
 
 ##Quick start
 
-The following files should be included.
+###Install by npm
+
+```
+npm install jzoom
+```
+
+###Include files
 
 ```html
-<script src="scripts/jquery.min.js"></script>
-<script src="scripts/jzoom.min.js"></script>
+<script src="jquery.min.js"></script>
+<script src="jzoom.js"></script>
 ```
 
 Call the plugin on an image's container as simple as
@@ -46,16 +52,16 @@ $('#container').jzoom({
 
 | Option | Type | Default | Description |
 |:---:|:---:|:---:|:---:|
-| width | Number | 400 | The width of  zooming window. |
-| height | Number | 400 | The height of  zooming window. |
-| position | String | "right" | The relative positon to the zoomed image or container. "top", "bottom" and "left" are permitted.  |
-| offsetX | Number | 20 | The deviation on X-asix, can't be negative. |
-| offsetY | Number | 0 | The deviation on Y-asix, can't be negative. |
-| opacity | Number | 0.6 | The opacity of lens div. |
-| bgColor | String | "#fff" | The background color of lens div. |
-| loading | String | "Loading..." | The loading text on zooming window when  big image is loading. |
-| suffixName | String | "_big" | The suffix name of big image. |
-| imgType | String | the zoomed image type | The type of big image. The default option is recommended. |
+| width | number | 400 | The width of  zooming window. |
+| height | number | 400 | The height of  zooming window. |
+| position | string | "right" | The relative positon to the zoomed image or container. "top", "bottom" and "left" are permitted.  |
+| offsetX | number | 20 | The deviation on X-asix, can't be negative. |
+| offsetY | number | 0 | The deviation on Y-asix, can't be negative. |
+| opacity | number | 0.6 | The opacity of lens div. |
+| bgColor | string | "#fff" | The background color of lens div. |
+| loading | string | "Loading..." | The loading text on zooming window when  big image is loading. |
+| suffixName | string | "_big" | The suffix name of big image. |
+| imgType | string | the zoomed image type | The type of big image. The default option is recommended. |
 
 ##Attentions
 
@@ -70,25 +76,23 @@ $('#container').jzoom({
 
 ##License
 
-The MIT License (MIT)
-
-Copyright (c) 2016 Shen Ting
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+[MIT License](https://en.wikipedia.org/wiki/MIT_License)
 
 --------
 
 ###使用说明
 
-引入下列文件，
+###通过 npm 安装
+
+```
+npm install jzoom
+```
+
+###引入文件
 
 ```html
-<script src="scripts/jquery.min.js"></script>
-<script src="scripts/jzoom.min.js"></script>
+<script src="jquery.min.js"></script>
+<script src="jzoom.js"></script>
 ```
 
 然后在想要放大的图片的容器上调用插件，
@@ -113,16 +117,16 @@ $('#container').jzoom({
 
 | 选项 | 类型 | 默认值 | 描述 |
 |:---:|:---:|:---:|:---:|
-| width | Number | 400 | 放大镜窗口的宽度 |
-| height | Number | 400 | 放大镜窗口的高度 |
-| position | String | "right" | 放大镜窗口相对于图片或容器的位置，还可设置为"top", "bottom", "left" |
-| offsetX | Number | 20 | 放大镜窗口在水平方向上的偏移，不能为负 |
-| offsetY | Number | 0 | 放大镜窗口在水平方向上的偏移，不能为负 |
-| opacity | Number | 0.6 | 镜头div的透明度 |
-| bgColor | String | "#fff" | 镜头div的背景色 |
-| loading | String | "Loading..." | 加载图片时显示的文字，水平垂直居中 |
-| suffixName | String | "_big" | 大图后缀名 |
-| imgType | String | 原图格式 | 大图的格式，建议与原图相同 |
+| width | number | 400 | 放大镜窗口的宽度 |
+| height | number | 400 | 放大镜窗口的高度 |
+| position | string | "right" | 放大镜窗口相对于图片或容器的位置，还可设置为"top", "bottom", "left" |
+| offsetX | number | 20 | 放大镜窗口在水平方向上的偏移，不能为负 |
+| offsetY | number | 0 | 放大镜窗口在水平方向上的偏移，不能为负 |
+| opacity | number | 0.6 | 镜头div的透明度 |
+| bgColor | string | "#fff" | 镜头div的背景色 |
+| loading | string | "Loading..." | 加载图片时显示的文字，水平垂直居中 |
+| suffixName | string | "_big" | 大图后缀名 |
+| imgType | string | 原图格式 | 大图的格式，建议与原图相同 |
 
 ###注意事项
 
@@ -134,13 +138,3 @@ $('#container').jzoom({
     * 名称：如原图的文件名为image，则大图的文件名需为“image + 后缀名” 。
     * 格式：大图与原图的格式建议相同，因为在IE下有时会出现bug。
     * 位于同一目录下。
-
-###其它
-
-1. 制作这个插件的原因其实是当我使用有名的“jqzoom”时，老是无法出现效果，无奈之下有了自己动手实现放大镜效果的想法。
-
-2. 当时简单地实现了效果并应用在网页中，并没有对代码进行优化，也有大量的冗余。
-
-3. 后来决定改良代码，优化性能，同时制作成jQuery插件，一方面熟悉了开发jQuery插件的过程，另一方面让我同时站在了开发者与用户的角度看待问题和需求，获益匪浅。
-
-4. 未来有时间精力的情况下，会继续维护开发这款插件，提供更多效果。
