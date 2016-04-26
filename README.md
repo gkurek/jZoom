@@ -17,10 +17,14 @@ A tiny and easy-using jQuery plugin for zoomimg images
 
 ##Quick start
 
-###Install by npm
+###Install by npm or bower
 
 ```
 npm install jzoom
+```
+
+```
+bower install jzoom
 ```
 
 ###Include files
@@ -76,16 +80,20 @@ $('#container').jzoom({
 
 ##License
 
-[MIT License](https://en.wikipedia.org/wiki/MIT_License)
+[MIT License](https://opensource.org/licenses/MIT)
 
 --------
 
 ###使用说明
 
-###通过 npm 安装
+###通过 npm 或 bower 安装
 
 ```
 npm install jzoom
+```
+
+```
+bower install jzoom
 ```
 
 ###引入文件
@@ -141,4 +149,4 @@ $('#container').jzoom({
 
 ##开源协议
 
-基于 [MIT](https://zh.wikipedia.org/wiki/MIT%E8%A8%B1%E5%8F%AF%E8%AD%89) 协议。
+基于 [MIT 协议](https://opensource.org/licenses/MIT)。
