@@ -19,11 +19,11 @@ A tiny and easy-using jQuery plugin for zoomimg images
 
 ###Install by npm or bower
 
-```
+```bash
 npm install jzoom
 ```
 
-```
+```bash
 bower install jzoom
 ```
 
