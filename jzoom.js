@@ -1,5 +1,7 @@
 /*!
- * jZoom.js 1.1.5
+ * jZoom.js
+ *
+ * Version 1.1.6
  *
  * https://github.com/pciapcib/jZoom
  *
@@ -8,6 +10,8 @@
  * Copyright (c) 2016 Shen Ting
  */
 (function($) {
+    'use strict';
+
     $.fn.jzoom = function(options) {
         return this.each(function() {
             // 设置默认属性
@@ -25,12 +29,13 @@
 
             // 用户自定义属性
             // Custom options
-            options = $.extend(true, defaultOptions, options);
+            options = $.extend({}, defaultOptions, options);
 
             // 获取容器，设置默认定位，并使图片的宽高与容器相同
             // Get container to add position and make the image having same width and height with container
             var $jzoom = $(this);
             var jzoomPosition = $jzoom.css('position');
+
             if (jzoomPosition === 'static') {
                 $jzoom.css('position', 'relative');
             }
@@ -45,52 +50,54 @@
             $jzoomLens.css({
                 position: 'absolute',
                 zIndex: '990',
-                opacity: defaultOptions.opacity,
+                opacity: options.opacity,
                 cursor: 'move',
                 border: '1px solid #ccc',
-                backgroundColor: defaultOptions.bgColor
+                backgroundColor: options.bgColor
             });
 
             // 获取放大镜div，设置样式，部分样式从属性设置中取得
             // Get zooming window and add css
             var $jzoomDiv = $('<div></div>');
             var jzoomDivLeft, jzoomDivTop;
-            switch (defaultOptions.position) {
+
+            switch (options.position) {
                 case 'top':
                     jzoomDivLeft = 0;
-                    jzoomDivTop = -defaultOptions.height - defaultOptions.offsetY;
+                    jzoomDivTop = -options.height - options.offsetY;
                     break;
                 case 'right':
-                    jzoomDivLeft = $jzoom.width() + defaultOptions.offsetX;
+                    jzoomDivLeft = $jzoom.width() + options.offsetX;
                     jzoomDivTop = 0;
                     break;
                 case 'bottom':
                     jzoomDivLeft = 0;
-                    jzoomDivTop = $jzoom.height() + defaultOptions.offsetY;
+                    jzoomDivTop = $jzoom.height() + options.offsetY;
                     break;
                 case 'left':
-                    jzoomDivLeft = -defaultOptions.width - defaultOptions.offsetX;
+                    jzoomDivLeft = -options.width - options.offsetX;
                     jzoomDivTop = 0;
                     break;
             }
+
             $jzoomDiv.css({
                 left: jzoomDivLeft + 'px',
                 top: jzoomDivTop + 'px',
-                width: defaultOptions.width + 'px',
-                height: defaultOptions.height + 'px',
+                width: options.width + 'px',
+                height: options.height + 'px',
                 position: 'absolute',
                 zIndex: '999',
                 overflow: 'hidden',
                 border: '1px solid #ccc',
                 fontSize: '20px',
                 textAlign: 'center',
-                lineHeight: defaultOptions.height + 'px'
+                lineHeight: options.height + 'px'
             });
 
             // 获取大图，并设置后缀名和文件格式，与载入文字一起添加到容器中
             // Create <img> of big image and add loading text
-            var $zoomImg = createZoomImg(defaultOptions.suffixName, defaultOptions.imgType);
-            $jzoomDiv.append($zoomImg).append(defaultOptions.loading);
+            var $zoomImg = createZoomImg(options.suffixName, options.imgType);
+            $jzoomDiv.append($zoomImg).append(options.loading);
 
             // 声明全局变量和常量
             // Variables
@@ -105,6 +112,7 @@
             $jzoom.mouseenter(function() {
                     $jzoomLens.show();
                     $jzoomDiv.show();
+
                     if (flag === 0) {
                         firstEnter();
                         flag++;

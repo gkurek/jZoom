@@ -20,11 +20,11 @@ A tiny and easy-using jQuery plugin for zoomimg images
 ###Install by npm or bower
 
 ```bash
-npm install jzoom
+$ npm install jzoom
 ```
 
 ```bash
-bower install jzoom
+$ bower install jzoom
 ```
 
 ###Include files
@@ -56,16 +56,16 @@ $('#container').jzoom({
 
 | Option | Type | Default | Description |
 |:---:|:---:|:---:|:---:|
-| width | number | 400 | The width of  zooming window. |
-| height | number | 400 | The height of  zooming window. |
-| position | string | "right" | The relative positon to the zoomed image or container. "top", "bottom" and "left" are permitted.  |
-| offsetX | number | 20 | The deviation on X-asix, can't be negative. |
-| offsetY | number | 0 | The deviation on Y-asix, can't be negative. |
-| opacity | number | 0.6 | The opacity of lens div. |
-| bgColor | string | "#fff" | The background color of lens div. |
-| loading | string | "Loading..." | The loading text on zooming window when  big image is loading. |
-| suffixName | string | "_big" | The suffix name of big image. |
-| imgType | string | the zoomed image type | The type of big image. The default option is recommended. |
+| width | Number | 400 | The width of  zooming window. |
+| height | Number | 400 | The height of  zooming window. |
+| position | String | "right" | The relative positon to the zoomed image or container. "top", "bottom" and "left" are permitted.  |
+| offsetX | Number | 20 | The deviation on X-asix, can't be negative. |
+| offsetY | Number | 0 | The deviation on Y-asix, can't be negative. |
+| opacity | Number | 0.6 | The opacity of lens div. |
+| bgColor | String | "#fff" | The background color of lens div. |
+| loading | String | "Loading..." | The loading text on zooming window when  big image is loading. |
+| suffixName | String | "_big" | The suffix name of big image. |
+| imgType | String | the zoomed image type | The type of big image. The default option is recommended. |
 
 ##Attentions
 
@@ -88,12 +88,12 @@ $('#container').jzoom({
 
 ###通过 npm 或 bower 安装
 
-```
-npm install jzoom
+```bash
+$ npm install jzoom
 ```
 
-```
-bower install jzoom
+```bash
+$ bower install jzoom
 ```
 
 ###引入文件
@@ -125,16 +125,16 @@ $('#container').jzoom({
 
 | 选项 | 类型 | 默认值 | 描述 |
 |:---:|:---:|:---:|:---:|
-| width | number | 400 | 放大镜窗口的宽度 |
-| height | number | 400 | 放大镜窗口的高度 |
-| position | string | "right" | 放大镜窗口相对于图片或容器的位置，还可设置为"top", "bottom", "left" |
-| offsetX | number | 20 | 放大镜窗口在水平方向上的偏移，不能为负 |
-| offsetY | number | 0 | 放大镜窗口在水平方向上的偏移，不能为负 |
-| opacity | number | 0.6 | 镜头div的透明度 |
-| bgColor | string | "#fff" | 镜头div的背景色 |
-| loading | string | "Loading..." | 加载图片时显示的文字，水平垂直居中 |
-| suffixName | string | "_big" | 大图后缀名 |
-| imgType | string | 原图格式 | 大图的格式，建议与原图相同 |
+| width | Number | 400 | 放大镜窗口的宽度 |
+| height | Number | 400 | 放大镜窗口的高度 |
+| position | String | "right" | 放大镜窗口相对于图片或容器的位置，还可设置为"top", "bottom", "left" |
+| offsetX | Number | 20 | 放大镜窗口在水平方向上的偏移，不能为负 |
+| offsetY | Number | 0 | 放大镜窗口在水平方向上的偏移，不能为负 |
+| opacity | Number | 0.6 | 镜头div的透明度 |
+| bgColor | String | "#fff" | 镜头div的背景色 |
+| loading | String | "Loading..." | 加载图片时显示的文字，水平垂直居中 |
+| suffixName | String | "_big" | 大图后缀名 |
+| imgType | String | 原图格式 | 大图的格式，建议与原图相同 |
 
 ###注意事项
 
