@@ -129,7 +129,7 @@ $('#container').jzoom({
 | height | Number | 400 | 放大镜窗口的高度 |
 | position | String | "right" | 放大镜窗口相对于图片或容器的位置，还可设置为"top", "bottom", "left" |
 | offsetX | Number | 20 | 放大镜窗口在水平方向上的偏移，不能为负 |
-| offsetY | Number | 0 | 放大镜窗口在水平方向上的偏移，不能为负 |
+| offsetY | Number | 0 | 放大镜窗口在垂直方向上的偏移，不能为负 |
 | opacity | Number | 0.6 | 镜头div的透明度 |
 | bgColor | String | "#fff" | 镜头div的背景色 |
 | loading | String | "Loading..." | 加载图片时显示的文字，水平垂直居中 |
