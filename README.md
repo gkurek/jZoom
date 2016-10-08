@@ -1,6 +1,6 @@
 #jZoom
 
-A tiny and easy-using jQuery plugin for zoomimg images
+A tiny and easy-using jQuery plugin for zooming images
 
 ##Index
 
