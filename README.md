@@ -1,23 +1,23 @@
-#jZoom
+# jZoom
 
 A tiny and easy-using jQuery plugin for zooming images
 
-##Index
+## Index
 
 * [Quick start](#quick-start)
 * [Options](#options)
 * [Attentions](#attentions)
 * [License](#license)
 
-###中文说明
+### 中文说明
 * [使用说明](#使用说明)
 * [配置选项](#配置选项)
 * [注意事项](#注意事项)
 * [开源协议](#开源协议)
 
-##Quick start
+## Quick start
 
-###Install by npm or bower
+### Install by npm or bower
 
 ```bash
 $ npm install jzoom
@@ -27,7 +27,7 @@ $ npm install jzoom
 $ bower install jzoom
 ```
 
-###Include files
+### Include files
 
 ```html
 <script src="jquery.min.js"></script>
@@ -42,7 +42,7 @@ $('#container').jzoom();
 
 All done !
 
-##Options
+## Options
 
 Custom the plugin with available options which are listed below.
 
@@ -67,7 +67,7 @@ $('#container').jzoom({
 | suffixName | String | "_big" | The suffix name of big image. |
 | imgType | String | the zoomed image type | The type of big image. The default option is recommended. |
 
-##Attentions
+## Attentions
 
 1. No CSS needed.
 
@@ -78,15 +78,15 @@ $('#container').jzoom({
     * types: The same types were recommended because some bugs may appear on IE.
     * In same folder.
 
-##License
+## License
 
 [MIT License](https://opensource.org/licenses/MIT)
 
 --------
 
-###使用说明
+### 使用说明
 
-###通过 npm 或 bower 安装
+### 通过 npm 或 bower 安装
 
 ```bash
 $ npm install jzoom
@@ -96,7 +96,7 @@ $ npm install jzoom
 $ bower install jzoom
 ```
 
-###引入文件
+### 引入文件
 
 ```html
 <script src="jquery.min.js"></script>
@@ -111,7 +111,7 @@ $('#container').jzoom();
 
 即可实现默认效果。
 
-###配置选项
+### 配置选项
 
 自定义插件时，需要在方法中传入一个对象，可配置的选项列于下表。
 
@@ -136,7 +136,7 @@ $('#container').jzoom({
 | suffixName | String | "_big" | 大图后缀名 |
 | imgType | String | 原图格式 | 大图的格式，建议与原图相同 |
 
-###注意事项
+### 注意事项
 
 1. CSS部分代码已完全集成到JS代码中。
 
@@ -147,6 +147,6 @@ $('#container').jzoom({
     * 格式：大图与原图的格式建议相同，因为在IE下有时会出现bug。
     * 位于同一目录下。
 
-##开源协议
+## 开源协议
 
 基于 [MIT 协议](https://opensource.org/licenses/MIT)。
